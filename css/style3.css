@@ -1,0 +1,84 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: sans-serif;
+}
+h3{
+
+  text-align: center;
+}
+
+a{
+  color: orange;
+}
+.container-photo{
+  width: 1280px;
+  margin: 100px auto 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container-photo .block {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: orange;
+  margin: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+
+}
+
+.container-photo .block .imgS{
+  position: relative;
+  overflow: hidden;
+}
+
+.container-photo .block .imgS img{
+  max-width: 100%;
+  transition: transform 2000ms;
+
+}
+
+.container-photo .block:hover .imgS img{
+  transform:scale(1.2);
+
+}
+
+.container-photo .block .describe{
+  position: absolute;
+  top:10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(0);
+  transition: transform 500ms;
+}
+
+.container-photo .block:hover .describe{
+  transform: scale(1);
+}
+
+.container-photo .block .describe .content{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 15px;
+  color: white;
+}
+
+.container-photo .block .describe .content h2{
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: orange;
+}
+
+.container-photo .block .describe .content p{
+  margin: 10px 0 0;
+  padding: 0;
+}
